@@ -1,0 +1,18 @@
+version: "3.7"
+services:
+  api_app:
+    build: 
+      context: ./src/
+    container_name: api-app
+    restart: always
+    ports:
+      - 5090:5090
+    networks:
+      - bpms-network
+
+volumes:
+  api_app: {}
+
+networks:
+  bpms-network:
+    external: true
