@@ -25,7 +25,7 @@ def test():
 
     detalles_request = {
         # 'metodo': metodo,
-        'cabeceras': cabeceras,
+        # 'cabeceras': cabeceras,
         'datos_cuerpo': datos_cuerpo.decode("utf-8"),  # Convertir a cadena si es necesario
         # 'argumentos_url': argumentos_url,
         'json_request': json_request, 
