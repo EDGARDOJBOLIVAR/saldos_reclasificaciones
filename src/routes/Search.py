@@ -1,7 +1,4 @@
 from flask import Blueprint, jsonify, request
-from utils.exeptions import ParameterException
-from utils.utils import paginate_list
-import json
 
 main = Blueprint('search_blueprint', __name__)
 

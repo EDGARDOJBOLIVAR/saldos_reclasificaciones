@@ -1,6 +1,6 @@
 from flask import Flask, jsonify
 from config import config
-from routes import Search
+from routes import Generate, Search
 from utils.exeptions import ParameterException
 
 app = Flask(__name__)
@@ -21,6 +21,7 @@ if __name__ == '__main__':
 
     # Blueprints
     app.register_blueprint(Search.main, url_prefix='/api/search')
+    app.register_blueprint(Generate.main, url_prefix='/api/generate')
 
     # Error Handlers
     app.register_error_handler(404, page_not_found)
