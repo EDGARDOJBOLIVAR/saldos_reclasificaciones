@@ -12,8 +12,8 @@ class CorteDatosModel(BaseModel):
     def inserts(self, corte_id: int, datos: list[AuditTaskImpl]):
         for data in datos:
             query = f"""INSERT INTO {self._Table} (id, instancia_id, corte_id, actividad) values (DEFAULT, :instancia_id, :corte_id, :actividad)"""
-            print(query)
-            print(data)
+            # print(query)
+            # print(data)
         
             self.BD2.insert(
                 query, 
